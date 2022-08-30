@@ -15,12 +15,6 @@ import { RepositoryModule } from './repository';
 import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      driver: ApolloDriver,
-      installSubscriptionHandlers: true,
-      debug: true,
-    }),
     MulterModule.register({
       storage: diskStorage({
         destination: './uploads',
@@ -35,14 +29,13 @@ import { ConfigModule } from '@nestjs/config';
     MailerModule,
     RepositoryModule,
     ConfigModule.forRoot(),
-    // UserModule,
   ],
   controllers: [AppController],
-  providers: [
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: LoggingInterceptor,
-    },
-  ],
+  // providers: [
+  //   {
+  //     provide: APP_INTERCEPTOR,
+  //     useClass: LoggingInterceptor,
+  //   },
+  // ],
 })
 export class AppModule {}

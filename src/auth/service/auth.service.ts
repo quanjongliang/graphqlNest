@@ -29,11 +29,13 @@ import {
   ChangePasswordDto,
   CreateUserDto,
   ForgetPasswordDto,
+  LoginUserInput,
   QueryUserDto,
   UpdateUserRoleDto,
 } from '../dto';
 import { ResetPasswordPayload, SubmitUserPayload } from '../interface';
 import { isTokenExpired } from '../util';
+import { LocalStrategy } from './local.strategy';
 
 @Injectable()
 export class AuthService {
@@ -64,7 +66,16 @@ export class AuthService {
     return this.jwtService.sign(payload);
   }
 
-  async createNewUser(createUserDto: CreateUserDto): Promise<void> {
+  async loginUser(loginUserInput: LoginUserInput) {
+    const { username, password } = loginUserInput;
+    const { password: userPassword, ...user } = await this.validateUser(
+      username,
+      password,
+    );
+    return this.login(user);
+  }
+
+  async createNewUser(createUserDto: CreateUserDto): Promise<string> {
     try {
       const { username, email, password: rawPassword } = createUserDto;
       const queryEmail = email ? { email } : {};
@@ -81,7 +92,8 @@ export class AuthService {
 
       const expiredTime = getExpiredTime(EXPIRES_IN_MINUTE.THIRTY_MINUTE);
       const token = this.jwtService.sign({ rawNewUser, expiredTime });
-      return this.mailerService.sendSubmitMail({ to: email, username, token });
+      // await this.mailerService.sendSubmitMail({ to: email, username, token });
+      return token;
     } catch (error) {
       console.log(error);
       throw new BadRequestException(error.message);
@@ -241,8 +253,8 @@ export class AuthService {
   }
 
   async getAllUsers(): Promise<User[]> {
-    // return this.userRepository.find();
-    return [];
+    return this.userRepository.find();
+    // return [];
   }
 
   async updateAvatarUser(user: User, avatar: number): Promise<number> {

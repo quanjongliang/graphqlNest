@@ -1,7 +1,7 @@
+import { Field, ObjectType } from '@nestjs/graphql';
 import { Exclude } from 'class-transformer';
-import { BeforeInsert, Column, Entity } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { BaseColumn } from '../base';
-import { Field, Int, ObjectType } from '@nestjs/graphql';
 
 export enum USER_ROLE {
   ADMIN = 'ADMIN',
@@ -26,7 +26,9 @@ export type UserWithOutPassword = Omit<User, 'password'>;
 
 export const USER_TABLE_NAME = 'user';
 
-@ObjectType()
+@ObjectType({
+  isAbstract: true,
+})
 @Entity(USER_TABLE_NAME)
 export class User extends BaseColumn {
   @Column({ unique: true })

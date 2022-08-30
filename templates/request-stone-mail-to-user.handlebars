@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Request Stone Email To User</title>
+
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgba(88, 124, 245, 1);
+            color: white;
+        }
+
+        .container {
+            width: 70%;
+            padding: 20px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .infor {
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body style=" background:rgba(128, 128, 128, 0.432);margin: 0 !important; padding: 0 !important;height:100vh">
+    <!-- HIDDEN PREHEADER TEXT -->
+    <div class="background"></div>
+
+    <div class="container">
+        <p>
+            Cảm ơn đã mua đơn hàng của chúng tôi
+        </p>
+        <div class="infor">
+            <p>
+                xin chào {{username}}
+            </p>
+            <p>
+                vào tài khoản game
+            </p>
+            <p>
+                username : {{gameUsername}}
+            </p>
+            <p>
+                password : {{password}}
+            </p>
+            <p>
+                server : {{server}}
+            </p>
+            <p>
+                UID: {{UID}}
+            </p>
+        </div>
+
+        <div style="display:flex;justify-content:center">
+            <table id="customers" class="table" style="width: 80%">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each auditInformations}}
+                    <tr>
+                        <td></td>
+                        <td> {{this.name}}</td>
+                        <td> {{this.quantity}}</td>
+                        <td> {{this.unitPrice}} </td>
+                        <td>
+                            {{this.total}}
+                        </td>
+                    </tr>
+
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        <div style="font-size:15px;margin:20px 0 ;">
+            <p>
+                Tổng đơn
+            </p>
+            <span>
+                {{total}}
+            </span>
+        </div>
+
+        <div class="entry">
+            {{#if note}}
+            <p>
+                Ghi chú: {{note}}
+            </p>
+            </h1>
+            {{/if}}
+        </div>
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>By Account To User Email</title>
+
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgba(88, 124, 245, 1);
+            color: white;
+        }
+
+        .container {
+            width: 70%;
+            padding: 20px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .infor {
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body style=" background:rgba(128, 128, 128, 0.432);margin: 0 !important; padding: 0 !important;height:100vh">
+    <!-- HIDDEN PREHEADER TEXT -->
+    <p>
+        Người dùng {{username}} đã mua tài khoản : {{account.name}}
+    </p>
+    <p>
+        Thông tin tài khoản:
+    </p>
+    <p>
+        Giá : {{account.newPrice}}
+    </p>
+    <p>
+        Mô tả: {{account.description}}
+    </p>
+    <p>
+        Ar: {{account.ar}}
+    </p>
+    <p>
+        Vũ khí: {{account.weapon}}
+    </p>
+    <p>
+        Lượng nhân vật: {{account.charCount}}
+    </p>
+    <p>
+        Lượng vũ khí: {{account.weaponCount}}
+    </p>
+    <p>
+        Hình ảnh :
+    </p>
+    <div>
+        {{#each listImage}}
+        <img src="{{this}}" width="300px" alt="">
+        {{/each}}
+    </div>
+
+
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 import { USER_ROLE } from '@/entity';
-import { Field, InputType } from '@nestjs/graphql';
+import { ArgsType, Field, InputType } from '@nestjs/graphql';
 import { IsEmail, IsNotEmpty } from 'class-validator';
 
 @InputType()
@@ -34,4 +34,10 @@ export class LoginUserDto {
   username: string;
   @Field()
   password: string;
+}
+
+@InputType()
+export class TokenConfirmUser {
+  @Field()
+  token: string;
 }

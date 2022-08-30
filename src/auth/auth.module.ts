@@ -7,6 +7,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { JWT_CONFIG } from '@/core';
 import { MailerModule } from '@/mailer';
 import { AuthResolver } from './resolver';
+import { GqlAuthGuard } from './guard';
 
 @Module({
   imports: [
@@ -19,7 +20,13 @@ import { AuthResolver } from './resolver';
     MailerModule,
   ],
   controllers: [AuthController, HideAuthController],
-  providers: [AuthService, LocalStrategy, JwtStrategy, AuthResolver],
+  providers: [
+    AuthService,
+    LocalStrategy,
+    JwtStrategy,
+    AuthResolver,
+    GqlAuthGuard,
+  ],
   exports: [AuthService],
 })
 export class AuthModule {}

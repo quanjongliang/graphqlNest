@@ -6,6 +6,7 @@ import gpl from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_USERS } from './graphQL/queries';
+import Register from './components/register/Register';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -13,14 +14,14 @@ function App() {
   useEffect(() => {
     if (data) {
       console.log(data);
-      setUsers(data.users);
+      setUsers(data.allUsers);
     }
   }, [data]);
   if (loading) return <img src={logo} className="App-logo" alt="logo" />;
   if (error) return <div>{JSON.stringify(error)}</div>;
   return (
     <div className="App">
-      {users.map((user, index) => (
+      {/* {users.map((user, index) => (
         <div key={index}>
           {Object.keys(user).map((key, index) => (
             <div key={index}>
@@ -29,7 +30,8 @@ function App() {
             </div>
           ))}
         </div>
-      ))}
+      ))} */}
+      <Register />
     </div>
   );
 }
