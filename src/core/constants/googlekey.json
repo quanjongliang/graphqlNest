@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shoppacc",
+  "private_key_id": "1b52cb35dd8fd99c427f618b74d637f4b986f53d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDHZOi4C//XQF7M\nIT1l9IoMzeGNbJzo890kseVWfLi/aVrrUXPC9K890yL7ljaAd+1Xrgi8IU7BtIyW\nlbFwgBOKS8/Drk7vzpk/eUeK6fhNHs7ryNk9uJcgopWAtqoXAbCz5Fsm6bvtkN43\nbOkLZBouF9pLeANPmpupVfqhaQlkt4We9+gQqbQ5TaLfpiBekWRjfVlBSNmCBBrq\nvIUnMHrge+sXEjVExYrRp6Xe645ZY6//w6sxNUqmrXXtxOaBKygjYaETD6lg+UDa\nx2DkvfJTrNksdtVf74DPM/Jm2QBhMGgNnqb7Xs7xUBKQx4EID43kaSE14BfXBoKp\n5Jto8feDAgMBAAECggEAKDTJ1GrfAOmC9Ahz1/4yZBiTta/ECBk8a2zPwNvPaRF2\neuLmw9YRDBdqA28ruEX2fuqh6kWRGvAsNSUkLXo19noI//1C/4oaTrlG2tUI84wV\nz2elnpN9LeB64wRyUcdOeUe/tZ4F/gZrOKPmbhyWRtsacoNVr5SOdNvYePm0IjGg\nRCxT8KWY9Y99pt5GvLp268oCzVrLaS0ZGRK0zzpDQDLXl9i1eA3YFBFdHyYYF225\n36B5nDT103GFyuEY1zl5Pgy8/SZQzXNniNvzPcvrRkboIkQl1AF7TPITt6+t0FHQ\nBo3EhW4Uux/xaGd8cbaoSXkjExCQn9/7dUj8uO08YQKBgQDnoHcZoOKha2YaH1qj\n5vZcfxtwO5K9VR4o+dmrcpT3BRK706d0c7KYFsjZFMNIfEQ9IrqCQaUBjf8HiV+E\na3Z505iC/Xe+hO+I404GWp9zp6FztnJfKV6lQfQRnN3IYe60IH10I7lX6HOaKnkc\nHesGfQlRtgaN2Nyc4bzNBALqkwKBgQDcYCo2MXKels1M7HbZJHUWiEomGEv+xPU+\nXCIGSBWlUqSuCg0GlGAudI+fi9pfrSlXhdYDcBrLToJbAzCZnizHHfEolgry50UJ\nJjp9ZP/Y2DWAwLDU0pnIOsuYTce843cVzjdR5EjYPSv2XlivAiR9e5wV2rYJS+4g\n9TmvtfelUQKBgD/9A4oP+Svw2JcU3Fx1PNAWyUS7IHGvpxJY27pSgDaxrxg2g4dX\nQxpjCP93je9jbRKamn3LlsMUMEUrvTh+248SVoqxbTgzz1y4tuBofq5bu+2UlIoX\niq8KxltrQ5XNAD3A0AeaquRPMkh/vU94MGptdnqdV7guFdw9PIRCvG+DAoGBAJMo\neCeWH3b9Nny+jqJzsOhp/DGyGdU3yphox6OwMRwjsqoxNf+FxzBeT6X3qswnAqta\nSM4k5w+KDowd9i8uq7IPMYGrqAYKH1R7vaUMc7hmsFuY0LxdIanOcTP0BIQC1Puv\np8s8iNQ1DQ1IdSnwYVOV3mXNla9hj9NcTbgi6ArxAoGAbv12Yj5dn/Mfu8UPLSF0\n2T1Ni621WDD9nB/zXVtiiT2fpQjND+Xb/EyEwr1QzmmIp+6adwzgSpw7T+kNO1vF\nooHrL3koc4TNSq8gv1N7ijuZCB5nMZb1maGmUHyguzpJfQwo91AameqzSqz6pAZ9\ntY+/DV2V/QryzU12dN115Bk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "quilldrive@shoppacc.iam.gserviceaccount.com",
+  "client_id": "104078756987083440319",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/quilldrive%40shoppacc.iam.gserviceaccount.com"
+}
